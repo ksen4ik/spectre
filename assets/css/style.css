@@ -56,7 +56,7 @@ a {
   width: fit-content;
 }
 
-img {
+img, video {
   width: 100%;
   display: block;
 }
@@ -837,4 +837,91 @@ main {
     padding: 80px 50px;
     width: 100%;
   }
+}
+.blockAbout ._container {
+  padding-top: clamp(50px, 6vw, 100px);
+  padding-bottom: clamp(50px, 6vw, 100px);
+}
+.blockAbout__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.blockAbout__image {
+  display: none;
+}
+.blockAbout__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 40px;
+}
+.blockAbout__video {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .blockAbout__text {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .blockAbout__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 40px;
+  }
+  .blockAbout__left {
+    width: 100%;
+    max-width: 380px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 30px;
+  }
+  .blockAbout__image {
+    width: 100%;
+    display: block;
+  }
+  .blockAbout__right {
+    width: 100%;
+    max-width: 750px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .blockAbout__left {
+    max-width: 500px;
+  }
+  .blockAbout__text {
+    max-width: 670px;
+  }
+}
+.footer ._container {
+  padding-top: clamp(50px, 6vw, 100px);
+  padding-bottom: clamp(50px, 6vw, 100px);
 }
