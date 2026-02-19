@@ -146,9 +146,10 @@ main {
     overflow: hidden;
     transition: all .3s;
     span {
-        font-size: clamp(14px, 2vw, 16px);
+        font-size: clamp(12px, 2vw, 14px);
         font-weight: 600;
         line-height: 100%;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
         text-align: center;
     }
@@ -390,6 +391,9 @@ main {
     }
     &__text {
         gap: 15px;
+        h1 {
+            font-size: clamp(28px, 3vw, 54px);
+        }
         h1, p {
             color: var(--white);
         }
@@ -416,11 +420,15 @@ main {
             align-items: center;
         }
         &__block {
-            max-width: 660px;
-            gap: 40px;
+            max-width: 740px;
+            gap: 60px;
         }
         &__text {
             gap: 20px;
+            p {
+                width: 100%;
+                max-width: 600px;
+            }
         }
         &__image {
             width: 100%;
@@ -776,9 +784,87 @@ main {
 
 
 .footer {
+    background: var(--dark);
     ._container {
         padding-top: clamp(50px, 6vw, 100px);
         padding-bottom: clamp(50px, 6vw, 100px);
     }
-    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__block {
+        width: 100%;
+        max-width: 330px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        svg {
+            width: 100%;
+        }
+        p {
+            color: var(--text-gray-2);
+        }
+        a {
+            color: var(--white);
+        }
+    }
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        span {
+            margin-bottom: 10px;
+            font-family: "El Messiri";
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 100%;
+            text-transform: uppercase;
+            color: var(--brand);
+        }
+        a {
+            font-size: 16px;
+            color: var(--white);
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .footer {
+        &__wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .footer {
+        &__content {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__wrapper {
+            max-width: 600px;
+        }
+        &__menu {
+            gap: 20px;
+            span {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .footer {
+        &__wrapper {
+            max-width: 740px;
+        }
+    }
 }
