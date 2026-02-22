@@ -144,6 +144,7 @@ main {
     align-items: center;
     gap: 15px;
     overflow: hidden;
+    cursor: pointer;
     transition: all .3s;
     span {
         font-size: clamp(12px, 2vw, 14px);
@@ -204,7 +205,8 @@ main {
     &.fixed {
         position: fixed;
         background: var(--white);
-        &__logo {
+        box-shadow: 2px 3px 12px rgba(0, 0, 0, .05);
+        .header__logo {
             svg {
                 path:nth-child(1), path:nth-child(2), path:nth-child(4), path:nth-child(5), path:nth-child(6) {
                     fill: var(--dark) !important;
@@ -341,6 +343,11 @@ main {
             line-height: 110%;
             text-transform: uppercase;
             color: var(--white);
+        }
+        &.fixed {
+            .header__link {
+                color: var(--dark);
+            }
         }
     }
     .burger {
@@ -631,6 +638,8 @@ main {
             }
         }
         &__text {
+            width: 100%;
+            max-width: 450px;
             gap: 0;
             p {
                 margin-top: 0;
