@@ -1217,6 +1217,37 @@ section.gray {
   color: var(--brand);
 }
 
+.blockFaq__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+.blockFaq__items {
+  display: -ms-grid;
+  display: grid;
+}
+.blockFaq__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0fr;
+  grid-template-rows: 0fr;
+  -webkit-transition: grid-template-rows 0.35s ease;
+  transition: grid-template-rows 0.35s ease;
+  transition: grid-template-rows 0.35s ease, -ms-grid-rows 0.35s ease;
+}
+.blockFaq__body > * {
+  overflow: hidden;
+}
+.blockFaq__item.is-open .blockFaq__body {
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+}
+
 .blockContacts__content, .blockContacts__block, .blockContacts__list {
   display: -webkit-box;
   display: -ms-flexbox;

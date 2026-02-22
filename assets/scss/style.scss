@@ -1037,6 +1037,33 @@ section {
 
 
 
+.blockFaq {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__items {
+        display: grid;
+    }
+    &__item {
+
+    }
+    &__body {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows .35s ease;
+        > * {
+            overflow: hidden;
+        }
+    }
+    &__item.is-open .blockFaq__body {
+        grid-template-rows: 1fr;
+    }
+}
+
+
+
 .blockContacts {
     &__content, &__block, &__list {
         display: flex;
